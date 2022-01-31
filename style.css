@@ -19,6 +19,7 @@ h1 {
     border-radius: 15px;
     height: 80px;
     width: 80px;
+    margin-top: 60px;
 }
 #pixel-board {
     display: flex;
@@ -38,7 +39,7 @@ border: 1px solid black;
 border-radius: 5px;
 }
 
-.black {
+/* .black {
     background-color: black;
     color: black
 }
@@ -60,4 +61,11 @@ border-radius: 5px;
 
 .white {
     background-color: white;
+} */
+
+#conteudo-central {
+    display:flex;
+    justify-content: center;
+    margin: 15px;
+    /* border: 1px solid black; */
 }

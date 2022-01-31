@@ -14,16 +14,16 @@
 <!--Requisito 3 - Adicione a cor preta como a primeira cor da paleta de cores.  -->
     <div id="color-palette">
       <!--Requisito 6 - Defina a cor preta como cor inicial. Ao carregar a página, a cor preta já deve estar selecionada para pintar os pixels --> 
-      <div class="black color selected">(..)</div>
-        <div class="green color">(..)</div>
-        <div class="blue color">(..)</div>
-        <div class="red color">(..)</div>
+      <div id="black" class="color selected">(..)</div>
+        <div id="green"  class="color">(..)</div>
+        <div id="blue"  class="color">(..)</div>
+        <div id="red"  class="color">(..)</div>
     </div>
-    
+  <div id="conteudo-central">
 <button type="button" onclick="clear()" id="clear-board">Limpar</button>
-<button type="button" id="generate-board" >VQV</button>
-
-<input type="text" id="board-size">
+<input id="board-size" type="number" min="1">
+<button id="generate-board">VQV</button>
+</div>  
 <!--Requisito 4 - Adicione à página um quadro de pixels, com 25 pixels.-->
 <div id="pixel-board">
     <div class="pixel-line">
