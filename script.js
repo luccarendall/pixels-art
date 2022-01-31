@@ -2,7 +2,7 @@
 const colors = document.querySelectorAll('.color');
 const pixelBoard = document.getElementById('pixel-board')
 const btnClearBoard = document.getElementById('clear-board');
-const vqvBtn = document.getElementById('generate-board');
+const generate = document.getElementById('generate-board');
 // Requisito 7 - Clicar em uma das cores da paleta faz com que ela seja selecionada e utilizada para preencher os pixels no quadro.
  
 function removeSelectedColor(e) {
@@ -36,11 +36,36 @@ function clear(event) {
 clearBtn.addEventListener('click', clear); //Esse estudor é acionado ao clicar no botão Limpar e executa a função clear
 
 // Requisito 10 - Faça o quadro de pixels ter seu tamanho definido pela pessoa usuária.
+const boardSize = document.getElementById('board-size')
+const pixels = document.getElementsByClassName('pixel');
+
+function min() {
+  if (boardSize.value < 5) {
+    boardSize.value = 5;
+  }
+}
+function max() {
+  if (boardSize.value > 50) {
+    boardSize.value = 50;
+  }
+}
+generate.addEventListener('click', () => {
+  if (boardSize.value === '') { alert('Board inválido!'); }
+  min();
+  max();
+  while (pixels.length < boardSize.value ** 2) {
+    const createPixel = document.createElement('div');
+    createPixel.classList.add('pixel');
+    pixelBoard.appendChild(createPixel);
+  }
+  while (pixels.length > boardSize.value ** 2) {
+    pixelBoard.removeChild(pixelBoard.lastChild);
+  }
+  pixelBoard.style.width = `${42 * boardSize.value}px`;
+});
 
 
 // Requisito 11 - Limite o tamanho mínimo e máximo do board.
-const boardSize = document.getElementById('board-size');
-
 function boardSizeFunction() {
   if (boardSize.value <= 5 && boardSize.value !== '') {
       boardSize.value = 5;
