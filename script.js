@@ -36,20 +36,6 @@ function clear(event) {
 clearBtn.addEventListener('click', clear); //Esse estudor é acionado ao clicar no botão Limpar e executa a função clear
 
 // Requisito 10 - Faça o quadro de pixels ter seu tamanho definido pela pessoa usuária.
-// Verifica se nenhum valor for colocado no input ao clicar no botão, um `alert` é exibido com o texto: 'Board inválido!'
-const pegandoSectionPaleta = document.querySelector('section');
-function criandoDivCorPaleta(n, classe) {
-  for (let i = 0; i < n; i += 1) {
-    const criandoDivPaleta = document.createElement('div');
-    pegandoSectionPaleta.appendChild(criandoDivPaleta);
-    criandoDivPaleta.className = classe;
-  }
-
-
-}
-
-
-  
 
 
 // Requisito 11 - Limite o tamanho mínimo e máximo do board.
