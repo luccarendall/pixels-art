@@ -8,6 +8,10 @@ h1 {
     color: white;
  }
 
+body {
+     background-color:#77dd77;
+ }
+
 #color-palette {
     justify-content: center;
     /* border: 1px solid black; */
@@ -17,8 +21,8 @@ h1 {
 #color-palette div {
     border: 1px solid black;
     border-radius: 15px;
-    height: 80px;
-    width: 80px;
+    height: 40px;
+    width: 40px;
     margin-top: 60px;
 }
 #pixel-board {
@@ -38,30 +42,6 @@ background-color: white;
 border: 1px solid black;
 border-radius: 5px;
 }
-
-/* .black {
-    background-color: black;
-    color: black
-}
-
-.blue{
-    background-color: blue;
-    color: blue
-}
-
-.green{
-    background-color: green;
-    color: green
-}
-
-.red {
-    background-color: red;
-    color: red
-}
-
-.white {
-    background-color: white;
-} */
 
 #conteudo-central {
     display:flex;
