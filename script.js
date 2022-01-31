@@ -37,7 +37,17 @@ clearBtn.addEventListener('click', clear); //Esse estudor é acionado ao clicar 
 
 // Requisito 10 - Faça o quadro de pixels ter seu tamanho definido pela pessoa usuária.
 // Verifica se nenhum valor for colocado no input ao clicar no botão, um `alert` é exibido com o texto: 'Board inválido!'
-if ()
+const pegandoSectionPaleta = document.querySelector('section');
+function criandoDivCorPaleta(n, classe) {
+  for (let i = 0; i < n; i += 1) {
+    const criandoDivPaleta = document.createElement('div');
+    pegandoSectionPaleta.appendChild(criandoDivPaleta);
+    criandoDivPaleta.className = classe;
+  }
+
+
+}
+
 
   
 
@@ -68,7 +78,3 @@ function boardSizeFunction() {
   const randomRGB3 = document.getElementById('red');
   randomRGB3.style.backgroundColor = `rgb(${Math.random() * 255}, 
   ${Math.random() * 255}, ${Math.random() * 255})`;
- 
-
-
-
